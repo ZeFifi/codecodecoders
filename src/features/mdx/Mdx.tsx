@@ -5,7 +5,9 @@ import { Suspense } from "react";
 export const Mdx = ({ children }: { children: string }) => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <MDXRemote source={children} components={MDX_COMPONENTS} />
+      <div className="whitespace-pre-line">
+        <MDXRemote source={children} components={MDX_COMPONENTS} />
+      </div>
     </Suspense>
   );
 };

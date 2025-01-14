@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Header } from "@/components/Header";
+import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 const geistSans = localFont({
@@ -14,6 +15,19 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -30,14 +44,12 @@ export default function RootLayout({
     <html lang="fr" className="h-full">
       <body
         className={cn(
-          `${geistSans.variable} ${geistMono.variable} antialiased h-full max-w-xl m-auto p-4`
+          `${geistSans.variable} ${geistMono.variable} ${inter.variable} ${poppins.variable} antialiased flex min-h-full flex-col`
         )}
       >
-        <div className="flex min-h-full flex-col">
-          <Header />
-          <div className="flex-1">{children}</div>
-          <Footer />
-        </div>
+        <Navbar />
+        <main className="m-auto w-full max-w-3xl flex-1 px-4">{children}</main>
+        <Footer />
       </body>
     </html>
   );

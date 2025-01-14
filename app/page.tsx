@@ -1,3 +1,4 @@
+import { Hero } from "@/components/Hero";
 import {
   Card,
   CardDescription,
@@ -10,17 +11,22 @@ import Link from "next/link";
 
 export default async function Home() {
   const posts = await getPosts();
-  return posts.map((post) => {
-    return (
-      <Card key={post.slug}>
-        <CardHeader>
-          <CardTitle>{post.title}</CardTitle>
-          <CardDescription>{post.description}</CardDescription>
-        </CardHeader>
-        <CardFooter>
-          <Link href={`/posts/${post.slug}`}>Lire</Link>
-        </CardFooter>
-      </Card>
-    );
-  });
+  return (
+    <div>
+      <Hero />
+      {posts.map((post) => {
+        return (
+          <Card key={post.slug} className="font-inter">
+            <CardHeader>
+              <CardTitle>{post.title}</CardTitle>
+              <CardDescription>{post.description}</CardDescription>
+            </CardHeader>
+            <CardFooter>
+              <Link href={`/posts/${post.slug}`}>Lire</Link>
+            </CardFooter>
+          </Card>
+        );
+      })}
+    </div>
+  );
 }
