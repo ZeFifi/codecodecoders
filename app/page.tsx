@@ -2,7 +2,6 @@ import { Hero } from "@/components/Hero";
 import {
   Card,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -16,15 +15,21 @@ export default async function Home() {
       <Hero />
       {posts.map((post) => {
         return (
-          <Card key={post.slug} className="font-inter">
-            <CardHeader>
-              <CardTitle>{post.title}</CardTitle>
-              <CardDescription>{post.description}</CardDescription>
-            </CardHeader>
-            <CardFooter>
-              <Link href={`/posts/${post.slug}`}>Lire</Link>
-            </CardFooter>
-          </Card>
+          <Link href={`/posts/${post.slug}`} className="no-effect">
+            <Card key={post.slug} className="font-inter shadow-none border-gray-200 rounded-md">
+              <CardHeader>
+                <CardTitle className="text-[#3367c2] text-xl">{post.title}</CardTitle>
+                <time className="text-xs text-gray-600" style={{marginTop: 0}}>
+                  {new Date(post.publishedAt).toLocaleDateString("fr-FR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+                <CardDescription className="mt-4">{post.description}</CardDescription>
+              </CardHeader>
+            </Card>
+          </Link>
         );
       })}
     </div>

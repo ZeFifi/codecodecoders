@@ -1,6 +1,8 @@
 import { Mdx } from "@/features/mdx/Mdx";
 import { getPost } from "@/lib/posts";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default async function RoutePage(props: { params: { slug: string } }) {
@@ -13,9 +15,17 @@ export default async function RoutePage(props: { params: { slug: string } }) {
   return (
     <article className="w-full">
       <header className="mb-8">
+        <div className="flex items-center space-x-2">
+        <div className="bg-gray-200 rounded-md p-2 w-fit">
+          <Link href="/" className="">
+            <ArrowLeft className="size-4 text-[#3367c2]" />
+        </Link></div>
+
         <h1 className="font-sans text-4xl font-bold tracking-tight">
           {post.title}
         </h1>
+
+        </div>
         <div className="flex items-center space-x-1 text-sm text-gray-600">
           <span>Le</span>
           <time>

@@ -14,7 +14,7 @@ body {
 
 @layer base {
   :root {
-    --background: 210 40% 96.08%;
+    --background: 210 16.67% 97.65%;
     --foreground: 334 55% 1%;
     --muted: 214.29 31.82% 91.37%;
     --muted-foreground: 334 9% 37%;
@@ -75,5 +75,26 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  a:not([class*="no-effect"]) {
+    position: relative;
+    display: inline-block;
+    transform: rotate(-1deg);
+  }
+
+  a:not([class*="no-effect"])::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.75rem;
+    background-color: rgb(147 197 253 / 0.6); /* blue-300/60 en Tailwind */
+    transform: skew(-6deg);
+    z-index: -1;
+    opacity: 1;
   }
 }
