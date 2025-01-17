@@ -20,29 +20,20 @@ export const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:flex items-center">
-            <ul className="flex gap-4">
+            <ul className="flex gap-8">
               <li>
-                <Link className="text-black hover:text-[#3367c2] no-effect" href="/">
-                <div className="flex items-center space-x-1">
-                  <Home className="size-4" />
-                  <p>Accueil</p>
-                </div>
+                <Link className="text-black no-effect" href="/">
+                  <p className="font-semibold hover:bg-gray-200 p-2 rounded-md">Accueil</p>
                 </Link>
               </li>
               <li>
-                <Link className="text-black hover:text-[#3367c2] no-effect" href="/about">
-                  <div className="flex items-center space-x-1">
-                    <QuestionMarkCircledIcon className="size-4" />
-                    <p>À propos</p>
-                  </div>
+                <Link className="text-black no-effect" href="/about">
+                    <p className="font-semibold hover:bg-gray-200 p-2 rounded-md">À propos</p>
                 </Link>
               </li>
               <li>
-                <Link className="text-black hover:text-[#3367c2] no-effect" href="/contact">
-                  <div className="flex items-center space-x-1">
-                    <Mail className="size-4" />
-                    <p>Contact</p>
-                  </div>
+                <Link className="text-black no-effect" href="/contact">
+                    <p className="font-semibold hover:bg-gray-200 p-2 rounded-md">Contact</p>
                 </Link>
               </li>
             </ul>
