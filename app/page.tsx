@@ -11,12 +11,15 @@ import Link from "next/link";
 export default async function Home() {
   const posts = await getPosts();
   return (
-    <div>
+    <>
       <Hero />
       {posts.map((post) => {
+        if (!post.published) {
+          return <div className="text-center text-gray-600">Il n'y a pas de post publié pour le moment</div>;
+        }
         return (
-          <Link href={`/posts/${post.slug}`} className="no-effect">
-            <Card key={post.slug} className="font-inter shadow-none border-gray-200 rounded-md">
+          <Link href={`/posts/${post.slug}`} className="no-effect" key={post.slug}>
+              <Card  className="font-inter shadow-none border-gray-200 rounded-md">
               <CardHeader>
                 <CardTitle className="text-[#3367c2] text-xl">{post.title}</CardTitle>
                 <time className="text-xs text-gray-600" style={{marginTop: 0}}>
@@ -32,6 +35,6 @@ export default async function Home() {
           </Link>
         );
       })}
-    </div>
+    </>
   );
 }
