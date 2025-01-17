@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { Badge } from "@/components/ui/Badge";
 import {
   Card,
   CardDescription,
@@ -30,6 +31,7 @@ export default async function Home() {
                   })}
                 </time>
                 <CardDescription className="mt-4">{post.description}</CardDescription>
+                <Badge category={post.category} className="w-fit" noLink>{post.category}</Badge>
               </CardHeader>
             </Card>
           </Link>

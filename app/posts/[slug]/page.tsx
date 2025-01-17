@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Badge } from "@/components/ui/Badge";
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -48,21 +49,21 @@ export default async function RoutePage({ params }: Props) {
               day: "numeric",
             })}
           </time>
+          <span>dans</span>
+          <Badge category={post.category}>{post.category}</Badge>
           {post.author && (
             <span className="flex items-center space-x-1">
               <span>par</span>
-              {post.author.link ? (
+              {post.author.link && (
                 <a
-                  href={post.author.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors duration-200 hover:text-blue-600 no-effect"
-                  aria-label={`Profil de ${post.author.name}`}
+                href={post.author.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors duration-200 hover:text-blue-600 no-effect underline"
+                aria-label={`Profil de ${post.author.name}`}
                 >
                   {post.author.name}
                 </a>
-              ) : (
-                <span>{post.author.name}</span>
               )}
             </span>
           )}
