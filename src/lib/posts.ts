@@ -7,6 +7,7 @@ const contentDirectory = path.join(process.cwd(), "content");
 
 export const PostSchema = z.object({
   title: z.string(),
+  category: z.enum(["soft-skills", "frontend", "backend", "devops", "database"]),
   description: z.string(),
   published: z.boolean().optional().default(true),
   publishedAt: z.string().default(new Date().toISOString()),
