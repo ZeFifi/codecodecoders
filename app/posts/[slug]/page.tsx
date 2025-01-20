@@ -29,10 +29,10 @@ export default async function RoutePage({ params }: Props) {
       <header className="mb-32 mt-8">
         <div className="flex flex-col items-center">
             <Badge category={post.category}>{post.category}</Badge>
-          <h1 className="font-sans text-4xl font-bold tracking-tight my-2">
+          <h1 className="font-robotoCondensed text-4xl font-bold tracking-tight my-2">
             {post.title}
           </h1>
-          <p className="text-sm text-center text-gray-600 mb-4">{post.description}</p>
+          <p className="text-sm text-center text-gray-600 mb-4 font-lora">{post.description}</p>
         </div>
 
 

@@ -29,7 +29,7 @@ export default async function CategoryPage({ params }: Props) {
               <ArrowLeft className="size-4 text-[#3367c2]" />
             </Link>
           </div>
-          <h1 className="font-sans text-4xl font-bold tracking-tight">
+          <h1 className="font-robotoCondensed text-4xl font-bold tracking-tight">
             Catégorie <span className="text-[#3367c2]">{category}</span>
           </h1>
         </div>
@@ -37,9 +37,9 @@ export default async function CategoryPage({ params }: Props) {
 
       {categoryPosts.map((post) => (
         <Link href={`/posts/${post.slug}`} className="no-effect" key={post.slug}>
-          <Card className="font-inter shadow-none border-gray-200 rounded-md">
+          <Card className="shadow-none border-gray-200 rounded-md">
             <CardHeader>
-              <CardTitle className="text-[#3367c2] text-xl">{post.title}</CardTitle>
+              <CardTitle className="text-[#3367c2] text-xl font-robotoCondensed">{post.title}</CardTitle>
               <time className="text-xs text-gray-600" style={{ marginTop: 0 }}>
                 {new Date(post.publishedAt).toLocaleDateString("fr-FR", {
                   year: "numeric",
@@ -47,7 +47,7 @@ export default async function CategoryPage({ params }: Props) {
                   day: "numeric",
                 })}
               </time>
-              <CardDescription className="mt-4">{post.description}</CardDescription>
+              <CardDescription className="mt-4 font-lora">{post.description}</CardDescription>
               <Badge category={post.category} className="w-fit" noLink>
                 {post.category}
               </Badge>
