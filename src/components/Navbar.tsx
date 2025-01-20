@@ -10,7 +10,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-    <nav className="mb-4 flex h-20 w-full items-center border-b border-gray-200 bg-white px-4 font-inter text-sm">
+    <nav className="mb-4 flex h-20 w-full items-center border-b border-gray-200 bg-[#fafafb] px-4 font-inter text-sm">
       <div className="relative w-full flex items-center">
           <HamburgerMenuIcon className="size-6 absolute left-0 md:hidden" onClick={() => setIsOpen(!isOpen)} />
         <div className="flex w-full justify-center md:justify-between text-black">
