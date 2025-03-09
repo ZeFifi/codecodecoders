@@ -10,12 +10,14 @@ export const MDX_COMPONENTS: MDXComponents = {
 
   h2: (props) => <h2 className="text-2xl font-bold -mb-4 font-robotoCondensed" {...props} />,
 
-  p: (props) => <p className="md:mb-4 font-lora" {...props} />,
+  p: (props) => <p className="font-lora" {...props} />,
 
   ul: (props) => (
     <ul
-      className="md:mb-4 list-inside list-disc font-lora leading-none"
+      className="-mt-6 list-inside list-disc font-lora leading-none"
       {...props}
     />
   ),
+
+  li: (props) => <li className="leading-normal -mt-2" {...props} />,
 };
