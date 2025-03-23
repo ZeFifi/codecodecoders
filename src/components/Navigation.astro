@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+---
+
+<nav
+  class="mb-4 flex h-20 w-full items-center border-b border-gray-200 bg-[#fafafb] px-4 font-inter text-sm"
+>
+  <div class="relative flex w-full items-center">
+    <button id="menuButton" class="absolute left-0 size-6 z-20 md:hidden">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        viewBox="0 0 50 50"
+      >
+        <path
+          d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"
+        ></path>
+      </svg>
+    </button>
+    <div class="flex w-full justify-center text-black md:justify-between">
+      <div class="items-center">
+        <a href="/" class="no-effect block">
+          <Image
+            src="/images/ccc.png"
+            alt="Logo"
+            width="70"
+            height="70"
+            loading="eager"
+          />
+        </a>
+      </div>
+      <div class="hidden items-center md:flex">
+        <ul class="flex gap-8">
+          <li>
+            <a class="no-effect text-black" href="/">
+              <p class="rounded-md p-2 font-semibold hover:bg-gray-200">
+                Accueil
+              </p>
+            </a>
+          </li>
+          <li>
+            <a class="no-effect text-black" href="/about">
+              <p class="rounded-md p-2 font-semibold hover:bg-gray-200">
+                À propos
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div
+  id="mobileMenu"
+  class="fixed inset-0 z-[100] bg-white/95 backdrop-blur-sm transition-transform duration-300 ease-in-out md:hidden -translate-x-full"
+>
+  <div class="mt-20 p-6">
+    <button
+      id="closeMenuButton"
+      class="absolute left-4 top-6 size-6 text-black hover:text-gray-600"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        viewBox="0 0 50 50"
+      >
+        <path
+          d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"
+        ></path>
+      </svg>
+    </button>
+    <ul class="flex flex-col gap-6 items-center text-2xl">
+      <li>
+        <a href="/">
+          <p>Accueil</p>
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          <p>À propos</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const menuButton = document.getElementById("menuButton");
+  const closeMenuButton = document.getElementById("closeMenuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
+  let isOpen = false;
+
+  if (menuButton && closeMenuButton && mobileMenu) {
+    const toggleMenu = (open: boolean) => {
+      isOpen = open;
+      mobileMenu.classList.toggle("-translate-x-full", !open);
+      document.body.style.overflow = open ? "hidden" : "";
+    };
+
+    menuButton.addEventListener("click", () => toggleMenu(true));
+    closeMenuButton.addEventListener("click", () => toggleMenu(false));
+  }
+</script>

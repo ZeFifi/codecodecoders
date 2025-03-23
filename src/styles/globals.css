@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+pre {
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.prose {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+.prose h1 {
+  font-size: 2em;
+  margin: 1em 0 0.5em;
+}
+.prose h2 {
+  font-size: 1.5em;
+  margin: 1em 0 0.5em;
+}
+.prose p {
+  margin: 1em 0;
+  line-height: 1.5;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+.prose li {
+  margin: 0.5em 0;
+}
+.prose strong {
+  font-weight: 600;
+}
+.prose em {
+  font-style: italic;
+}
