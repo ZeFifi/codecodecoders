@@ -6,16 +6,20 @@ pre {
 }
 
 .prose {
-  max-width: 65ch;
+  max-width: 48rem;
   margin: 0 auto;
 }
 .prose h1 {
   font-size: 2em;
-  margin: 1em 0 0.5em;
+  margin: 0.5em 0 0;
 }
 .prose h2 {
   font-size: 1.5em;
-  margin: 1em 0 0.5em;
+  margin: 2em 0 0.5em;
+}
+.prose h3 {
+  font-size: 1.25em;
+  margin: 2em 0 0.5em;
 }
 .prose p {
   margin: 1em 0;
@@ -28,10 +32,59 @@ pre {
 }
 .prose li {
   margin: 0.5em 0;
+  list-style-type: disc;
 }
 .prose strong {
   font-weight: 600;
 }
 .prose em {
   font-style: italic;
+}
+
+.prose code {
+  font-size: 0.875rem;
+  background-color: oklch(92.8% 0.006 264.531);
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+}
+
+.prose pre > code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.prose table th,
+.prose table td {
+  padding: 0.5rem;
+  border: 1px solid oklch(92.8% 0.006 264.531);
+}
+
+.prose table th {
+  background-color: oklch(98.4% 0.003 247.858);
+}
+
+.prose details {
+  margin: 1em 0;
+  background-color: oklch(95% 0.052 163.051);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.prose details p {
+  margin-bottom: 0;
+}
+
+.prose details pre {
+  margin-top: 1rem;
+}
+
+.prose details summary {
+  cursor: pointer;
 }

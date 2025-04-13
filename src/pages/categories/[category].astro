@@ -1,0 +1,68 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Badge from "../../components/Badge.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  const categories = [
+    ...new Set(posts.flatMap((post) => post.data.categories)),
+  ];
+
+  return categories.map((category) => ({
+    params: { category },
+    props: {
+      posts: posts.filter((post) => post.data.categories.includes(category)),
+      category,
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+const pageTitle = `Articles ${category} - CodeCodeCoders`;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="mt-8">
+    <div class="flex items-center gap-2">
+      <a href="/" class="no-effect">
+        <Badge category="home">Accueil</Badge>
+      </a>
+      <span class="text-gray-600">/</span>
+      <Badge category={category} noLink>
+        {category}
+      </Badge>
+    </div>
+
+    <h1 class="font-robotoCondensed text-4xl font-bold tracking-tight mt-4">
+      Articles dans la catégorie {category}
+    </h1>
+
+    <div class="mt-8 space-y-8">
+      {
+        posts.map((post) => (
+          <div class="rounded-md border-solid border-1 border-gray-200 p-4">
+            <a href={`/post/${post.slug}`}>
+              <h2 class="text-xl font-semibold leading-none tracking-tight text-[#3367c2]">
+                {post.data.title}
+              </h2>
+            </a>
+            <time class="text-xs text-gray-600">
+              {new Date(post.data.pubDate).toLocaleDateString("fr-FR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </time>
+            <p class="my-4 text-sm">{post.data.description}</p>
+            {post.data.categories.map((cat) => (
+              <Badge category={cat} className="w-fit" noLink={cat === category}>
+                {cat}
+              </Badge>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

@@ -1,5 +1,5 @@
 ---
-type Category = "soft-skills" | "frontend" | "backend" | "devops" | "database";
+type Category = "soft-skills" | "frontend" | "blog" | "home";
 
 interface Props {
   category: Category;
@@ -10,9 +10,8 @@ interface Props {
 const variants: Record<Category, string> = {
   "soft-skills": "bg-blue-100 text-blue-800 border-blue-100",
   frontend: "bg-purple-100 text-purple-800 border-purple-100",
-  backend: "bg-green-100 text-green-800 border-green-100",
-  devops: "bg-orange-100 text-orange-800 border-orange-100",
-  database: "bg-yellow-100 text-yellow-800 border-yellow-100",
+  blog: "bg-green-100 text-green-800 border-green-100",
+  home: "bg-gray-100 text-gray-800 border-gray-100",
 };
 
 const { category, className = "", noLink = false } = Astro.props;
@@ -26,7 +25,10 @@ const { category, className = "", noLink = false } = Astro.props;
       <slot />
     </div>
   ) : (
-    <a href={`/categories/${category}`} class="no-effect">
+    <a
+      href={category === "home" ? "/" : `/categories/${category}`}
+      class="no-effect"
+    >
       <div
         class={`inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-semibold ${variants[category]} ${className} cursor-pointer hover:opacity-80`}
       >

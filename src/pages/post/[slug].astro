@@ -19,33 +19,23 @@ const { Content } = await post.render();
 
 <PostLayout pageTitle={post.data.title}>
   <article class="w-full prose">
-    <header class="mb-16 md:mb-32 md:mt-8">
-      <div class="flex flex-col items-center">
-        <Badge category={post.data.categories}>
-          {post.data.categories}
-        </Badge>
-        <h1
-          class="my-2 text-center font-robotoCondensed text-4xl font-bold tracking-tight"
-        >
+    <header class="mt-8">
+      <div class="flex flex-col">
+        <div class="flex">
+          <a href="/" class="no-effect">
+            <Badge category="home">Accueil</Badge>
+          </a>
+          <span class="mx-2 text-gray-600">/</span>
+          <Badge category={post.data.categories}>
+            {post.data.categories}
+          </Badge>
+        </div>
+        <h1 class="font-robotoCondensed text-4xl font-bold tracking-tight">
           {post.data.title}
         </h1>
-        <p class="mb-4 text-center font-lora text-sm text-gray-600">
-          {post.data.description}
-        </p>
-      </div>
-
-      <div class="flex flex-col items-center text-sm text-gray-600">
-        <div class="flex gap-2">
-          <Image
-            loading="eager"
-            src="/images/Philippe.jpeg"
-            alt={post.data.author.name}
-            class="size-10 rounded-full"
-            width="40"
-            height="40"
-          />
-          <div class="flex flex-col">
-            <time>
+        <div class="flex items-center text-sm">
+          <p class="text-gray-600 !m-0">
+            Le <time>
               {
                 new Date(post.data.pubDate).toLocaleDateString("fr-FR", {
                   year: "numeric",
@@ -54,6 +44,7 @@ const { Content } = await post.render();
                 })
               }
             </time>
+            par&nbsp;
             <div class="flex items-center">
               {
                 post.data.author && (
@@ -72,7 +63,7 @@ const { Content } = await post.render();
                   </span>
                 )
               }
-              <div class="size-6">
+              <div class="size-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -89,8 +80,11 @@ const { Content } = await post.render();
                 </svg>
               </div>
             </div>
-          </div>
+          </p>
         </div>
+        <p class="font-lora">
+          {post.data.description}
+        </p>
       </div>
     </header>
 
