@@ -1,6 +1,6 @@
 ---
 title: "Bienvenue sur CodeCodeCoders !"
-pubDate: "2024-04-12"
+pubDate: "2025-04-12"
 description: "Soyez les bienvenus sur CodeCodeCoders ! Comment démarrer ce blog sans une brève présentation de qui je suis et pourquoi j'ai décidé de le créer ?"
 author:
   name: "Philippe Pinceloup"

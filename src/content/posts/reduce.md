@@ -1,6 +1,6 @@
 ---
 title: "Comprendre reduce en Javascript"
-pubDate: "2024-04-13"
+pubDate: "2025-04-13"
 description: "Apprenons ensemble à utiliser efficacement la méthode reduce en JavaScript grâce à des exemples concrets."
 author:
   name: "Philippe Pinceloup"
