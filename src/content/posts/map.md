@@ -88,7 +88,7 @@ const fichiers = ["index.html", "style.css", "app.js"];
 
 const avecExtension = fichiers.map((fichier) => {
   const extension = fichier.split(".").pop();
-  return { nom, extension };
+  return { nom: fichier, extension };
 });
 ```
 
@@ -105,7 +105,7 @@ const avecExtension = fichiers.map((fichier) => {
 Exemple un peu plus technique ! Ici, on transforme chaque _string_ du tableau en objet contenant plus d’infos.
 On a donc un _array_ `fichiers` qui contient des noms de fichiers. On crée ensuite une constante `extension` : `.split(".").pop()` permet d'obtenir ce qui vient après le point. Donc respectivement pour chaque fichier `html`, `css` et `js`.
 
-Enfin, on retourne un objet qui contient les clés `nom` et `extension` pour chacun des fichiers.
+Enfin, on retourne un objet qui contient les clés `nom` (le nom complet du fichier) et `extension` pour chacun des fichiers.
 
 ## Maintenant, à votre tour !
 
@@ -203,8 +203,10 @@ Ici, pour chaque prénom de l'_array_ `prenoms`, on ajoute le mot "Bonjour". Com
 ## Bonnes pratiques
 
 - `.map()` **doit retourner une valeur** à chaque itération. Sinon, le tableau résultant contiendra des `undefined`.
-- Préférez `.map()` à une boucle `for` lorsque vous voulez **transformer** un tableau. Pour des effets de bord, `.forEach()` est plus adaptée.
+- Préférez `.map()` à une boucle `for` lorsque vous voulez **créer un nouveau tableau transformé à partir d’un tableau source**.  
+  `.map()` **ne modifie jamais le tableau d’origine** : il retourne toujours un nouveau tableau.
 - Ne modifiez pas les éléments du tableau original dans le `callback`. `.map()` doit être **purement fonctionnelle**.
+- Un point fort de `.map()` (comme d’autres méthodes d’array) est qu’on peut **chaîner** plusieurs méthodes pour écrire du code plus expressif et lisible.
 
 ## En résumé
 
