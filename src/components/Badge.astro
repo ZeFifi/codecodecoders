@@ -20,7 +20,7 @@ const { category, className = "", noLink = false } = Astro.props;
 {
   noLink ? (
     <div
-      class={`inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-semibold ${variants[category]} ${className}`}
+      class={`inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-semibold mr-1 ${variants[category]} ${className}`}
     >
       <slot />
     </div>

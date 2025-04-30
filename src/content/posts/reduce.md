@@ -1,5 +1,5 @@
 ---
-title: "Comprendre reduce en Javascript"
+title: "Comprendre reduce en JavaScript"
 pubDate: "2025-04-13"
 description: "Apprenons ensemble à utiliser efficacement la méthode reduce en JavaScript grâce à des exemples concrets."
 author:
