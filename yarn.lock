@@ -1467,6 +1467,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"codecodecoders@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "codecodecoders@workspace:."
+  dependencies:
+    "@astrojs/rss": "npm:^4.0.11"
+    "@tailwindcss/vite": "npm:^4.0.14"
+    astro: "npm:^5.5.2"
+    markdown-it: "npm:^14.1.0"
+    sanitize-html: "npm:^2.16.0"
+    tailwindcss: "npm:^4.0.14"
+    vite: "npm:^6.3.5"
+  languageName: unknown
+  linkType: soft
+
 "color-convert@npm:^2.0.1":
   version: 2.0.1
   resolution: "color-convert@npm:2.0.1"
@@ -2620,20 +2634,6 @@ __metadata:
   checksum: 10c0/a6cacc0a848af84f03e3f5bda7b0de75e4d0aa9ddce5517fd23ed0f31b5ddd51b2d0ff0b7e09b51f7de0f4053c7a1107117edda6b0732dca3e9e39e6c5a68c64
   languageName: node
   linkType: hard
-
-"majestic-mass@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "majestic-mass@workspace:."
-  dependencies:
-    "@astrojs/rss": "npm:^4.0.11"
-    "@tailwindcss/vite": "npm:^4.0.14"
-    astro: "npm:^5.5.2"
-    markdown-it: "npm:^14.1.0"
-    sanitize-html: "npm:^2.16.0"
-    tailwindcss: "npm:^4.0.14"
-    vite: "npm:^6.3.5"
-  languageName: unknown
-  linkType: soft
 
 "make-fetch-happen@npm:^14.0.3":
   version: 14.0.3

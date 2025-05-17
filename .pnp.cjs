@@ -11,14 +11,14 @@ const RAW_RUNTIME_STATE =
   ],\
   "dependencyTreeRoots": [\
     {\
-      "name": "majestic-mass",\
+      "name": "codecodecoders",\
       "reference": "workspace:."\
     }\
   ],\
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
-    ["majestic-mass", ["workspace:."]]\
+    ["codecodecoders", ["workspace:."]]\
   ],\
   "fallbackPool": [\
   ],\
@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@astrojs/rss", "npm:4.0.11"],\
-          ["@tailwindcss/vite", "virtual:efd5c95961962ce675ae722b16fea7be12c3835e80a693d48faeaf1a2f8fcf837a761508a450150621137c4af3438eb27358f73fc8dcc01634df257ab51836e2#npm:4.1.6"],\
+          ["@tailwindcss/vite", "virtual:59a419ed684c5d1e64f9221f29ec1d13dcb77e98d5a1254c71f89afe8e7734d9ec68437e0959cbfb601bba6cbf82cd3ad613889b62e83f63f148515c326e0636#npm:4.1.6"],\
           ["astro", "npm:5.7.12"],\
           ["markdown-it", "npm:14.1.0"],\
           ["sanitize-html", "npm:2.16.0"],\
@@ -1211,10 +1211,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:efd5c95961962ce675ae722b16fea7be12c3835e80a693d48faeaf1a2f8fcf837a761508a450150621137c4af3438eb27358f73fc8dcc01634df257ab51836e2#npm:4.1.6", {\
-        "packageLocation": "./.yarn/__virtual__/@tailwindcss-vite-virtual-2c2106ac03/3/.yarn/berry/cache/@tailwindcss-vite-npm-4.1.6-fe22163f17-10c0.zip/node_modules/@tailwindcss/vite/",\
+      ["virtual:59a419ed684c5d1e64f9221f29ec1d13dcb77e98d5a1254c71f89afe8e7734d9ec68437e0959cbfb601bba6cbf82cd3ad613889b62e83f63f148515c326e0636#npm:4.1.6", {\
+        "packageLocation": "./.yarn/__virtual__/@tailwindcss-vite-virtual-6d13dc4d95/3/.yarn/berry/cache/@tailwindcss-vite-npm-4.1.6-fe22163f17-10c0.zip/node_modules/@tailwindcss/vite/",\
         "packageDependencies": [\
-          ["@tailwindcss/vite", "virtual:efd5c95961962ce675ae722b16fea7be12c3835e80a693d48faeaf1a2f8fcf837a761508a450150621137c4af3438eb27358f73fc8dcc01634df257ab51836e2#npm:4.1.6"],\
+          ["@tailwindcss/vite", "virtual:59a419ed684c5d1e64f9221f29ec1d13dcb77e98d5a1254c71f89afe8e7734d9ec68437e0959cbfb601bba6cbf82cd3ad613889b62e83f63f148515c326e0636#npm:4.1.6"],\
           ["@tailwindcss/node", "npm:4.1.6"],\
           ["@tailwindcss/oxide", "npm:4.1.6"],\
           ["@types/vite", null],\
@@ -1731,6 +1731,22 @@ const RAW_RUNTIME_STATE =
           ["clsx", "npm:2.1.1"]\
         ],\
         "linkType": "HARD"\
+      }]\
+    ]],\
+    ["codecodecoders", [\
+      ["workspace:.", {\
+        "packageLocation": "./",\
+        "packageDependencies": [\
+          ["codecodecoders", "workspace:."],\
+          ["@astrojs/rss", "npm:4.0.11"],\
+          ["@tailwindcss/vite", "virtual:59a419ed684c5d1e64f9221f29ec1d13dcb77e98d5a1254c71f89afe8e7734d9ec68437e0959cbfb601bba6cbf82cd3ad613889b62e83f63f148515c326e0636#npm:4.1.6"],\
+          ["astro", "npm:5.7.12"],\
+          ["markdown-it", "npm:14.1.0"],\
+          ["sanitize-html", "npm:2.16.0"],\
+          ["tailwindcss", "npm:4.1.6"],\
+          ["vite", "virtual:5c0e652e67420e38570e2e7972ba269e6cfb3f75ed2e153d83d2920a9d39122ed6675c7ad2d57cbbe5059d70a3709bfa870049abf23f7778139ecf0f3cfbe546#npm:6.3.5"]\
+        ],\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["color", [\
@@ -2980,22 +2996,6 @@ const RAW_RUNTIME_STATE =
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
-      }]\
-    ]],\
-    ["majestic-mass", [\
-      ["workspace:.", {\
-        "packageLocation": "./",\
-        "packageDependencies": [\
-          ["majestic-mass", "workspace:."],\
-          ["@astrojs/rss", "npm:4.0.11"],\
-          ["@tailwindcss/vite", "virtual:efd5c95961962ce675ae722b16fea7be12c3835e80a693d48faeaf1a2f8fcf837a761508a450150621137c4af3438eb27358f73fc8dcc01634df257ab51836e2#npm:4.1.6"],\
-          ["astro", "npm:5.7.12"],\
-          ["markdown-it", "npm:14.1.0"],\
-          ["sanitize-html", "npm:2.16.0"],\
-          ["tailwindcss", "npm:4.1.6"],\
-          ["vite", "virtual:5c0e652e67420e38570e2e7972ba269e6cfb3f75ed2e153d83d2920a9d39122ed6675c7ad2d57cbbe5059d70a3709bfa870049abf23f7778139ecf0f3cfbe546#npm:6.3.5"]\
-        ],\
-        "linkType": "SOFT"\
       }]\
     ]],\
     ["make-fetch-happen", [\
