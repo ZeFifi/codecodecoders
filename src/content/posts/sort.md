@@ -141,9 +141,9 @@ Quelques explications :
 
 ```js
 const utilisateurs = [
-  { nom: "Luc", age: 32 },
-  { nom: "Anna", age: 28 },
-  { nom: "Marc", age: 45 },
+  { nom: "Lance", age: 32 },
+  { nom: "Fernando", age: 28 },
+  { nom: "Lando", age: 45 },
 ];
 
 utilisateurs.sort((a, b) => a.age - b.age);
