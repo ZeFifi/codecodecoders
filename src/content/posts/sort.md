@@ -5,7 +5,7 @@ description: "Apprenez à trier vos tableaux avec sort et mettez de l'ordre dans
 author:
   name: "Philippe Pinceloup"
   url: "https://www.linkedin.com/in/philippe-pinceloup/"
-categories: ["frontend"]
+categories: ["javascript"]
 ---
 
 ## Pourquoi utiliser sort ?

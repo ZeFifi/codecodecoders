@@ -1,5 +1,5 @@
 ---
-type Category = "soft-skills" | "frontend" | "blog" | "home";
+type Category = "soft-skills" | "javascript" | "blog" | "home" | "react";
 
 interface Props {
   category: Category;
@@ -9,9 +9,10 @@ interface Props {
 
 const variants: Record<Category, string> = {
   "soft-skills": "bg-blue-100 text-blue-800 border-blue-100",
-  frontend: "bg-purple-100 text-purple-800 border-purple-100",
+  javascript: "bg-yellow-100 text-yellow-800 border-yellow-100",
   blog: "bg-green-100 text-green-800 border-green-100",
   home: "bg-gray-100 text-gray-800 border-gray-100",
+  react: "bg-blue-100 text-blue-800 border-blue-100",
 };
 
 const { category, className = "", noLink = false } = Astro.props;

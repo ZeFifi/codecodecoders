@@ -5,7 +5,7 @@ description: "Apprenez à combiner map, filter et reduce pour écrire du code Ja
 author:
   name: "Philippe Pinceloup"
   url: "https://www.linkedin.com/in/philippe-pinceloup/"
-categories: ["frontend"]
+categories: ["javascript"]
 ---
 
 ## Pourquoi chaîner map, filter et reduce ?

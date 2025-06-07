@@ -5,7 +5,7 @@ description: "Découvrons ensemble comment filtrer efficacement des tableaux en 
 author:
   name: "Philippe Pinceloup"
   url: "https://www.linkedin.com/in/philippe-pinceloup/"
-categories: ["frontend"]
+categories: ["javascript"]
 ---
 
 ## Pourquoi utiliser filter ?

@@ -5,7 +5,7 @@ description: "Apprenons ensemble à utiliser efficacement la méthode map en Jav
 author:
   name: "Philippe Pinceloup"
   url: "[https://www.linkedin.com/in/philippe-pinceloup/](https://www.linkedin.com/in/philippe-pinceloup/)"
-categories: ["frontend"]
+categories: ["javascript"]
 ---
 
 ## Pourquoi utiliser map ?
